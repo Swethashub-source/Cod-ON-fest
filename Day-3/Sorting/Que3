@@ -1,0 +1,12 @@
+# https://leetcode.com/problems/group-anagrams/
+
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        Anagramsmap=dict()
+        for s in strs:
+            k=tuple(sorted(s))
+            if k not in Anagramsmap.keys():
+                Anagramsmap[k]=list()
+            Anagramsmap[k].append(s)
+        return list(Anagramsmap.values())
+            
