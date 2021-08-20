@@ -1,0 +1,14 @@
+# https://www.codechef.com/problems/GOOGOL05
+
+n=int(input())
+strs=[]
+for i in range(n):
+    strs.append(input())
+d=dict()
+for s in strs:
+    if s not in d:
+        d[s]=0
+    d[s]+=1
+for di in sorted(d.keys()):
+    print(di + " " +str(d[di]))
+    
