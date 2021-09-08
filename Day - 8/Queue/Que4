@@ -1,0 +1,19 @@
+// https://www.codechef.com/problems/FLOW006 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int t,n,i;
+    cin>>t;
+    for(i=0;i<t;i++){
+        cin>>n;
+        int cnt=0;
+        while(n>0){
+            cnt+=(n%10);
+            n=n/10;
+            }
+        cout<<cnt<<endl;
+    }
+	return 0;
+}
