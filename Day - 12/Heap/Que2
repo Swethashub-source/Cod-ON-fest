@@ -1,0 +1,24 @@
+# https://leetcode.com/problems/relative-ranks/
+
+class Solution:
+    def findRelativeRanks(self, score: List[int]) -> List[str]:
+        d=dict()
+        length=len(score)
+        for i in range(length):
+            d[score[i]]=i
+        score.sort(reverse=True)
+        for i in range(length):
+            d[score[i]]=i
+        l=[]
+        for i in d:
+            idx=d[i]
+            if(idx==0):
+                l.append("Gold Medal")
+            elif(idx==1):
+                l.append("Silver Medal")
+            elif(idx==2):
+                l.append("Bronze Medal")
+            else:
+                l.append(str(idx+1))
+            
+        return l
