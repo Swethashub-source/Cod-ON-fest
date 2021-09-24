@@ -1,0 +1,22 @@
+// https://www.codechef.com/problems/TREEROOT
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++){
+        int n,id,sum_id,root;
+        cin>>n;
+        root=0;
+        for(int j=0;j<n;j++){
+            cin>>id>>sum_id;
+            root+=id;
+            root-=sum_id;
+        }
+        cout<<root<<endl;
+    }
+    return 0;
+}
